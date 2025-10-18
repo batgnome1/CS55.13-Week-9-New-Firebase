@@ -34,7 +34,7 @@ export default async function Home(props) {
         initialUserId={currentUser?.uid || ""}
       >
         <Suspense fallback={<GeminiSummarySkeleton />}>
-          <GeminiSummary restaurantId={params.id} />
+          <GeminiSummary moduleId={params.id} />
         </Suspense>
       </Module>
       <Suspense
