@@ -77,7 +77,7 @@ export default function ModuleListings({
   }, [router, filters]);
 
   useEffect(() => {
-    return getModuleSnapshotbyId((data) => {
+    return getModuleSnapshot((data) => {
       setModules(data);
     }, filters);
   }, [filters]);
