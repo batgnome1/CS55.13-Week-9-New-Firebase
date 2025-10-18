@@ -16,9 +16,10 @@ service cloud.firestore {
     //   - Updates are allowed if no fields are added and name is unchanged
     //   - Deletes are not allowed (default)
     match /modules/{moduleId} {
-      allow read;
-      allow create: if request.auth != null;
-      allow update: if request.auth != null;
+      allow read, write: if true;
+   //   allow read;
+   //   allow create: if request.auth != null;
+   //   allow update: if request.auth != null;
     //  allow update: if request.resource.data.lastReviewUserId != null;
      // allow update: if request.auth != null
      //               && unchanged("name");
@@ -28,9 +29,10 @@ service cloud.firestore {
         //   - Authenticated user can create if userId matches
         //   - Deletes and updates are not allowed (default)
         match /ratings/{ratingId} {
-          allow read;
-          allow create: if request.auth != null;
-          allow update: if request.auth != null
+          allow read, write: if true;
+        //  allow read;
+        //  allow create: if request.auth != null;
+        //  allow update: if request.auth != null
                         && request.resource.data.userId == request.auth.uid;
       }
     }
