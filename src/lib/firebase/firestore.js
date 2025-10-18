@@ -376,7 +376,7 @@ export async function addModulesAndReviews() {
       // Add each review to the restaurant's ratings subcollection
       for (const ratingData of difficultyData) {
         await addDoc(
-          collection(db, "restaurants", docRef.id, "ratings"),
+          collection(db, "modules", docRef.id, "difficulty"),
           ratingData
         );
       }

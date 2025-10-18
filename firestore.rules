@@ -15,7 +15,7 @@ service cloud.firestore {
     //   - Authenticated user can create/update (for demo purposes only)
     //   - Updates are allowed if no fields are added and name is unchanged
     //   - Deletes are not allowed (default)
-    match /module/{moduleId} {
+    match /modules/{moduleId} {
       allow read;
       allow update: if request.resource.data.lastReviewUserId != null;
      // allow create: if request.auth != null;
@@ -26,7 +26,7 @@ service cloud.firestore {
         //   - Authenticated user can read
         //   - Authenticated user can create if userId matches
         //   - Deletes and updates are not allowed (default)
-        match /ratings/{ratingId} {
+        match /difficulty/{difficultyId} {
           allow read;
           allow write: if request.resource.data.UserId != null;
        //   allow create: if request.auth != null;
