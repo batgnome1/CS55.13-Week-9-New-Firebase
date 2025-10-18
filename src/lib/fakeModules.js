@@ -24,10 +24,10 @@ export async function generateModulesAndReviews() {
       );
 
       const ratingData = {
-        rating:
+        difficulty:
           randomData.moduleReviews[
             randomNumberBetween(0, randomData.moduleReviews.length - 1)
-          ].rating,
+          ].difficulty,
         text: randomData.moduleReviews[
           randomNumberBetween(0, randomData.moduleReviews.length - 1)
         ].text,
@@ -40,7 +40,7 @@ export async function generateModulesAndReviews() {
 
     const avgRating = ratingsData.length
       ? ratingsData.reduce(
-          (accumulator, currentValue) => accumulator + currentValue.rating,
+          (accumulator, currentValue) => accumulator + currentValue.difficulty,
           0
         ) / ratingsData.length
       : 0;
@@ -59,7 +59,7 @@ export async function generateModulesAndReviews() {
       ],
       numRatings: ratingsData.length,
       sumRating: ratingsData.reduce(
-        (accumulator, currentValue) => accumulator + currentValue.rating,
+        (accumulator, currentValue) => accumulator + currentValue.difficulty,
         0
       ),
       difficulty: randomNumberBetween(1, 5),
