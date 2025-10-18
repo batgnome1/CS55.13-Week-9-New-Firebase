@@ -393,29 +393,45 @@ export function getReviewsSnapshotByModuleId(moduleId, cb) {
  * @returns {Promise<void>} Promise that resolves when all data is added
  */
 export async function addModulesAndReviews() {
-  // Generate fake restaurant and review data
-  const data = await generateModulesAndReviews();
+  console.log("🌱 Starting to add modules and reviews...");
   
-  // Process each restaurant and its associated reviews
-  for (const { moduleData, difficultyData } of data) {
-    try {
-      // Add the restaurant document to the restaurants collection
-      const docRef = await addDoc(
-        collection(db, "modules"),
-        moduleData
-      );
-
-      // Add each review to the restaurant's ratings subcollection
-      for (const ratingData of difficultyData) {
-        await addDoc(
-          collection(db, "modules", docRef.id, "difficulty"),
-          ratingData
+  try {
+    // Generate fake restaurant and review data
+    const data = await generateModulesAndReviews();
+    console.log("📊 Generated data:", data.length, "modules");
+    
+    // Process each restaurant and its associated reviews
+    for (const { moduleData, difficultyData } of data) {
+      try {
+        console.log("➕ Adding module:", moduleData.name);
+        
+        // Add the restaurant document to the restaurants collection
+        const docRef = await addDoc(
+          collection(db, "modules"),
+          moduleData
         );
+        
+        console.log("✅ Module added with ID:", docRef.id);
+
+        // Add each review to the restaurant's ratings subcollection
+        for (const ratingData of difficultyData) {
+          await addDoc(
+            collection(db, "modules", docRef.id, "difficulty"),
+            ratingData
+          );
+        }
+        
+        console.log("✅ Added", difficultyData.length, "difficulty ratings");
+      } catch (e) {
+        // Log any errors that occur during the data addition process
+        console.error("❌ Error adding module:", moduleData.name, e);
+        throw e; // Re-throw to stop the process
       }
-    } catch (e) {
-      // Log any errors that occur during the data addition process
-      console.log("There was an error adding the document");
-      console.error("Error adding document: ", e);
     }
+    
+    console.log("🎉 Successfully added all modules and reviews!");
+  } catch (error) {
+    console.error("❌ Error in addModulesAndReviews:", error);
+    throw error;
   }
 }

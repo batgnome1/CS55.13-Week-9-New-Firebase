@@ -8,6 +8,7 @@ import { randomData } from "@/src/lib/randomData.js";
 import { Timestamp } from "firebase/firestore";
 
 export async function generateModulesAndReviews() {
+  console.log("🎲 Generating fake modules and reviews...");
   const modulesToAdd = 5;
   const data = [];
 
@@ -73,6 +74,10 @@ export async function generateModulesAndReviews() {
       moduleData,
       difficultyData: ratingsData,
     });
+    
+    console.log(`📝 Generated module ${i + 1}:`, moduleData.name, "with", ratingsData.length, "reviews");
   }
+  
+  console.log("✅ Generated", data.length, "modules total");
   return data;
 }
