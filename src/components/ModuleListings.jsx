@@ -7,7 +7,7 @@ import Link from "next/link";
 import { React, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import renderSkulls from "@/src/components/Skulls.jsx";
-import { getModulesSnapshot } from "@/src/lib/firebase/firestore.js";
+import { getModuleSnapshot } from "@/src/lib/firebase/firestore.js";
 import Filters from "@/src/components/Filters.jsx";
 
 const ModuleItem = ({ module }) => (
