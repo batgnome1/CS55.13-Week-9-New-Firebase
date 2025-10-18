@@ -93,11 +93,11 @@ export default function Filters({ filters, setFilters }) {
             label="Difficulty"
             options={[
               "", 
-              "&#128128;", 
-              "&#128128;&#128128;", 
-              "&#128128;&#128128;&#128128;", 
-              "&#128128;&#128128;&#128128;&#128128;",
-              "&#128128;&#128128;&#128128;&#128128;&#128128;"
+              "💀", 
+              "💀💀", 
+              "💀💀💀", 
+              "💀💀💀💀",
+              "💀💀💀💀💀"
             ]}
             value={filters.price}
             onChange={(event) => handleSelectionChange(event, "difficulty")}
