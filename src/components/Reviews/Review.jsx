@@ -3,7 +3,7 @@ import renderSkulls from "@/src/components/Skulls.jsx";
 export function Review({ rating, text, timestamp }) {
   return (
     <li className="review__item">
-      <ul className="module__difficulty">{renderSkulls(rating)}</ul>
+      <ul className="module__rating">{renderSkulls(rating)}</ul>
       <p>{text}</p>
 
       <time>
@@ -18,7 +18,7 @@ export function Review({ rating, text, timestamp }) {
 export function ReviewSkeleton() {
   return (
     <li className="review__item">
-      <div className="module__difficulty">
+      <div className="module__rating">
         <div
           style={{
             height: "2rem",

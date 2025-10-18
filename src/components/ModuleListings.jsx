@@ -34,13 +34,13 @@ const ImageCover = ({ photo, name }) => (
 const ModuleDetails = ({ module }) => (
   <div className="module__details">
     <h2>{module.name}</h2>
-    <ModuleDifficulty module={module} />
+    <ModuleRating module={module} />
     <ModuleMetadata module={module} />
   </div>
 );
 
-const ModuleDifficulty = ({ module }) => (
-  <div className="module__difficulty">
+const ModuleRating = ({ module }) => (
+  <div className="module__rating">
     <ul>{renderSkulls(module.avgRating)}</ul>
     <span>({module.numRatings})</span>
   </div>
@@ -51,7 +51,7 @@ const ModuleMetadata = ({ module }) => (
     <p>
       {module.genre} | {module.players}
     </p>
-    <p>{"$".repeat(module.difficulty)}</p>
+    <p>{"💀".repeat(module.difficulty)}</p>
   </div>
 );
 

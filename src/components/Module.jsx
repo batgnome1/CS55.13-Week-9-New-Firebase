@@ -40,7 +40,7 @@ export default function Module({
   
   // State for managing review form data
   const [review, setReview] = useState({
-    difficulty: 0,
+    rating: 0,
     text: "",
   });
 
@@ -81,7 +81,7 @@ export default function Module({
    */
   const handleClose = () => {
     setIsOpen(false);
-    setReview({ difficulty: 0, text: "" });
+    setReview({ rating: 0, text: "" });
   };
 
   /**

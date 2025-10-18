@@ -80,7 +80,7 @@ const updateWithRating = async (
   const newNumRatings = data?.numRatings ? data.numRatings + 1 : 1;
   
   // Add the new rating to the sum (default to 0 if no sum exists)
-  const newSumRating = (data?.sumRating || 0) + Number(review.difficulty);
+  const newSumRating = (data?.sumRating || 0) + Number(review.rating);
   
   // Calculate the new average rating
   const newAverage = newSumRating / newNumRatings;
@@ -123,7 +123,7 @@ export async function addReviewToModule(db, moduleId, review) {
                 // Create references to the restaurant document and new rating document
                 const docRef = doc(collection(db, "modules"), moduleId);
                 const newRatingDocument = doc(
-                        collection(db, `modules/${moduleId}/difficulty`)
+                        collection(db, `modules/${moduleId}/ratings`)
                 );
 
                 // Use a transaction to atomically update restaurant stats and add the review
@@ -134,7 +134,7 @@ export async function addReviewToModule(db, moduleId, review) {
         } catch (error) {
                 // Log the error and re-throw it for the calling code to handle
                 console.error(
-                        "There was an error adding the difficulty to the module",
+                        "There was an error adding the rating to the module",
                         error
                 );
                 throw error;
@@ -330,7 +330,7 @@ export async function getReviewsByModuleId(db, moduleId) {
 
   // Create a query for the restaurant's ratings subcollection, ordered by timestamp (newest first)
   const q = query(
-    collection(db, "modules", moduleId, "difficulty"),
+    collection(db, "modules", moduleId, "rating"),
     orderBy("timestamp", "desc")
   );
 
@@ -366,7 +366,7 @@ export function getReviewsSnapshotByModuleId(moduleId, cb) {
 
   // Create a query for the restaurant's ratings subcollection, ordered by timestamp (newest first)
   const q = query(
-    collection(db, "modules", moduleId, "difficulty"),
+    collection(db, "modules", moduleId, "ratings"),
     orderBy("timestamp", "desc")
   );
   
@@ -401,7 +401,7 @@ export async function addModulesAndReviews() {
     console.log("📊 Generated data:", data.length, "modules");
     
     // Process each restaurant and its associated reviews
-    for (const { moduleData, difficultyData } of data) {
+    for (const { moduleData, ratingsData } of data) {
       try {
         console.log("➕ Adding module:", moduleData.name);
         
@@ -414,14 +414,14 @@ export async function addModulesAndReviews() {
         console.log("✅ Module added with ID:", docRef.id);
 
         // Add each review to the restaurant's ratings subcollection
-        for (const ratingData of difficultyData) {
+        for (const ratingData of ratingsData) {
           await addDoc(
-            collection(db, "modules", docRef.id, "difficulty"),
+            collection(db, "modules", docRef.id, "ratings"),
             ratingData
           );
         }
         
-        console.log("✅ Added", difficultyData.length, "difficulty ratings");
+        console.log("✅ Added", ratingsData.length, " ratings");
       } catch (e) {
         // Log any errors that occur during the data addition process
         console.error("❌ Error adding module:", moduleData.name, e);

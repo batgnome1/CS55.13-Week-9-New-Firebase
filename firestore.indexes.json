@@ -9,7 +9,7 @@
           "order": "ASCENDING"
         },
         {
-          "fieldPath": "players",
+          "fieldPath": "avgRating",
           "order": "DESCENDING"
         }
       ]

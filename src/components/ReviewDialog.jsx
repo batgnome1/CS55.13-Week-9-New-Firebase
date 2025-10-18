@@ -62,7 +62,7 @@ const ReviewDialog = ({
         onSubmit={(e) => {
             // Extract form data before submission for debugging
             const text = e.target.text.value;
-            const rating = e.target.difficulty.value;
+            const rating = e.target.rating.value;
             const userId = e.target.userId.value;
             const restId = e.target.moduleId.value;
             // Close dialog after form submission

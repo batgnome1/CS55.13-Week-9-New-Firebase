@@ -23,11 +23,11 @@ export async function generateModulesAndReviews() {
         getRandomDateAfter(moduleTimestamp.toDate())
       );
 
-      const difficultyData = {
-        difficulty:
+      const ratingData = {
+        rating:
           randomData.moduleReviews[
             randomNumberBetween(0, randomData.moduleReviews.length - 1)
-          ].difficulty,
+          ].rating,
         text: randomData.moduleReviews[
           randomNumberBetween(0, randomData.moduleReviews.length - 1)
         ].text,
@@ -35,12 +35,12 @@ export async function generateModulesAndReviews() {
         timestamp: ratingTimestamp,
       };
 
-      ratingsData.push(difficultyData);
+      ratingsData.push(ratingData);
     }
 
     const avgRating = ratingsData.length
       ? ratingsData.reduce(
-          (accumulator, currentValue) => accumulator + currentValue.difficulty,
+          (accumulator, currentValue) => accumulator + currentValue.rating,
           0
         ) / ratingsData.length
       : 0;
@@ -59,7 +59,7 @@ export async function generateModulesAndReviews() {
       ],
       numRatings: ratingsData.length,
       sumRating: ratingsData.reduce(
-        (accumulator, currentValue) => accumulator + currentValue.difficulty,
+        (accumulator, currentValue) => accumulator + currentValue.rating,
         0
       ),
       difficulty: randomNumberBetween(1, 5),
@@ -72,7 +72,7 @@ export async function generateModulesAndReviews() {
 
     data.push({
       moduleData,
-      difficultyData: ratingsData,
+      ratingsData,
     });
     
     console.log(`📝 Generated module ${i + 1}:`, moduleData.name, "with", ratingsData.length, "reviews");

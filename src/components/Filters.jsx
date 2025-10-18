@@ -107,7 +107,7 @@ export default function Filters({ filters, setFilters }) {
 
           <FilterSelect
             label="Sort"
-            options={["Difficulty", "Players"]}
+            options={["Rating", "Review"]}
             value={filters.sort}
             onChange={(event) => handleSelectionChange(event, "sort")}
             name="sort"

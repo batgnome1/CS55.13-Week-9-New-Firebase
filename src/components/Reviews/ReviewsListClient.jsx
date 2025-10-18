@@ -24,7 +24,7 @@ export default function ReviewsListClient({
             {reviews.map((review) => (
               <Review
                 key={review.id}
-                difficulty={review.difficulty}
+                rating={review.rating}
                 text={review.text}
                 timestamp={review.timestamp}
               />
