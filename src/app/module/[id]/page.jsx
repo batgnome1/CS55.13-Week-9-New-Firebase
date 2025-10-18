@@ -1,6 +1,6 @@
-import Restaurant from "@/src/components/Module.jsx";
+import Module from "@/src/components/Module.jsx";
 import { Suspense } from "react";
-import { getRestaurantById } from "@/src/lib/firebase/firestore.js";
+import { getModuleById } from "@/src/lib/firebase/firestore.js";
 import {
   getAuthenticatedAppForUser,
   getAuthenticatedAppForUser as getUser,
