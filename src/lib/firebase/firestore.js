@@ -330,7 +330,7 @@ export async function getReviewsByModuleId(db, moduleId) {
 
   // Create a query for the restaurant's ratings subcollection, ordered by timestamp (newest first)
   const q = query(
-    collection(db, "modules", moduleId, "rating"),
+    collection(db, "modules", moduleId, "ratings"),
     orderBy("timestamp", "desc")
   );
 
