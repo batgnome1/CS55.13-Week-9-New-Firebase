@@ -80,6 +80,22 @@ export default function Header({ initialUser }) {
     signInWithGoogle(); // Call Firebase Google sign in function
   };
 
+  /**
+   * Handle adding sample data to the database
+   * Prevents default link behavior and calls the seeding function
+   * @param {Event} event - The click event
+   */
+  const handleAddSampleData = async (event) => {
+    event.preventDefault(); // Prevent the default link navigation
+    try {
+      await addModulesAndReviews();
+      alert('✅ Sample data added successfully!');
+    } catch (error) {
+      console.error('Error adding sample data:', error);
+      alert('❌ Error adding sample data: ' + error.message);
+    }
+  };
+
   return (
     <header>
       {/* App logo and title - links back to home page */}
@@ -112,8 +128,8 @@ export default function Header({ initialUser }) {
 
                 {/* Option to add sample data (for development/testing) */}
                 <li>
-                  <a href="#" onClick={addModulesAndReviews}>
-                    Refresh Module List
+                  <a href="#" onClick={handleAddSampleData}>
+                    Add Sample Data
                   </a>
                 </li>
 

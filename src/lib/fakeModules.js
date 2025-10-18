@@ -37,11 +37,11 @@ export async function generateModulesAndReviews() {
       ratingsData.push(difficultyData);
     }
 
-    const avgRating = difficultyData.length
-      ? difficultyData.reduce(
-          (accumulator, currentValue) => accumulator + currentValue.rating,
+    const avgRating = ratingsData.length
+      ? ratingsData.reduce(
+          (accumulator, currentValue) => accumulator + currentValue.difficulty,
           0
-        ) / difficultyData.length
+        ) / ratingsData.length
       : 0;
 
     const moduleData = {
@@ -56,9 +56,9 @@ export async function generateModulesAndReviews() {
       players: randomData.modulePlayers[
         randomNumberBetween(0, randomData.modulePlayers.length - 1)
       ],
-      numRatings: difficultyData.length,
-      sumRating: difficultyData.reduce(
-        (accumulator, currentValue) => accumulator + currentValue.rating,
+      numRatings: ratingsData.length,
+      sumRating: ratingsData.reduce(
+        (accumulator, currentValue) => accumulator + currentValue.difficulty,
         0
       ),
       difficulty: randomNumberBetween(1, 5),
@@ -71,7 +71,7 @@ export async function generateModulesAndReviews() {
 
     data.push({
       moduleData,
-      difficultyData,
+      difficultyData: ratingsData,
     });
   }
   return data;
