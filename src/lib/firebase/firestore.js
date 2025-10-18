@@ -214,7 +214,7 @@ export async function getModules(db = db, filters = {}) {
  * @param {Object} filters - Filter options for the query
  * @returns {Function} Unsubscribe function to stop listening to changes
  */
-export function getModuleSnapshot(cb, filters = {}) {
+export function getModuleSnapshotbyId(cb, filters = {}) {
   // Validate that the callback is a function
   if (typeof cb !== "function") {
     console.log("Error: The callback parameter is not a function");
