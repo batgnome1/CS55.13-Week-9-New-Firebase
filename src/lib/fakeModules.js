@@ -9,7 +9,7 @@ import { Timestamp } from "firebase/firestore";
 
 export async function generateModulesAndReviews() {
   console.log("🎲 Generating fake modules and reviews...");
-  const modulesToAdd = 5;
+  const modulesToAdd = 60;
   const data = [];
 
   for (let i = 0; i < modulesToAdd; i++) {
