@@ -272,14 +272,46 @@ export async function getModuleById(db, moduleId) {
 
 /**
  * Set up a real-time listener for a specific restaurant's data changes
- * This function is currently a placeholder and not implemented
- * @param {string} restaurantId - The ID of the restaurant to listen to
+ * This function creates a snapshot listener that triggers whenever a specific restaurant's data changes
+ * @param {string} moduleId - The ID of the restaurant to listen to
  * @param {Function} cb - Callback function that receives the updated restaurant data
  * @returns {Function} Unsubscribe function to stop listening to changes
  */
 export function getModuleSnapshotById(moduleId, cb) {
-  // TODO: Implement real-time listener for single restaurant
-  return;
+  // Validate the module ID
+  if (!moduleId) {
+    console.log("Error: Invalid moduleId received: ", moduleId);
+    return;
+  }
+
+  // Validate that the callback is a function
+  if (typeof cb !== "function") {
+    console.log("Error: The callback parameter is not a function");
+    return;
+  }
+
+  // Create a reference to the specific module document
+  const docRef = doc(db, "modules", moduleId);
+  
+  // Set up real-time listener for document changes
+  return onSnapshot(docRef, (docSnapshot) => {
+    if (docSnapshot.exists()) {
+      // Transform the document into a plain object for client components
+      const moduleData = {
+        id: docSnapshot.id, // Include the document ID
+        ...docSnapshot.data(), // Spread all document data
+        // Convert Firestore timestamp to JavaScript Date object
+        // Only plain objects can be passed to Client Components from Server Components
+        timestamp: docSnapshot.data().timestamp?.toDate(),
+      };
+      
+      // Call the callback with the transformed data
+      cb(moduleData);
+    } else {
+      console.log("No such module document!");
+      cb(null);
+    }
+  });
 }
 
 /**
