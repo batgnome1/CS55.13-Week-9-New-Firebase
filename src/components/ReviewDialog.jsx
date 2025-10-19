@@ -1,7 +1,7 @@
 "use client";
 
 import { useLayoutEffect, useRef } from "react";
-import {SkullRatingPicker} from "@/src/components/RatingPicker.jsx";
+import SkullRatingPicker from "@/src/components/RatingPicker.jsx";
 import { handleReviewFormSubmission } from "@/src/app/actions.js";
 
 const ReviewDialog = ({ isOpen, handleClose, review, onChange, userId, id }) => {

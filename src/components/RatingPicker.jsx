@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Skull } from "@/src/components/SingleSkull.jsx"; // adjust path if needed
+import  Skull from "@/src/components/SingleSkull.jsx"; // adjust path if needed
 
 
 export default function SkullRatingPicker({ rating, onChange }) {
