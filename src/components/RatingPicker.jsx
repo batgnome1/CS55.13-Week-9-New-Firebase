@@ -3,18 +3,18 @@ import { useState } from "react";
 export default function SkullRatingPicker({ rating, onChange }) {
   const [hovered, setHovered] = useState(0);
 
-  const SkullIcon = ({ filled }) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill={filled ? "#9b30ff" : "none"} // always set fill properly
-      stroke="#9b30ff"                   // outline color
-      strokeWidth={1.5}
-      className="h-12 w-12 transition-transform"
-    >
-      <path d="M12 2C7.03 2 3 6.03 3 11a8.99 8.99 0 005 8v2a1 1 0 001 1h2v-2h2v2h2a1 1 0 001-1v-2a8.99 8.99 0 005-8c0-4.97-4.03-9-9-9zm-3 9a1 1 0 110-2 1 1 0 010 2zm6 0a1 1 0 110-2 1 1 0 010 2zm-3 4c-1.66 0-3-1.34-3-3h6c0 1.66-1.34 3-3 3z"/>
-    </svg>
-  );
+const SkullIcon = ({ filled }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill={filled ? "currentColor" : "none"}
+    stroke="currentColor"
+    strokeWidth={filled ? 0 : 1.5}
+    className={`h-10 w-10 ${filled ? "text-purple-600" : "text-gray-400"}`}
+  >
+    <path d="M12 2C10 2 8 4 8 6c0 1.5 0 3 0 3s-2 0-2 2c0 3 4 3 6 3s6 0 6-3c0-2-2-2-2-2s0-1.5 0-3c0-2-2-4-4-4zm0 7a1 1 0 110-2 1 1 0 010 2zm-3 4a1 1 0 110-2 1 1 0 010 2zm6 0a1 1 0 110-2 1 1 0 010 2zm-3 5c-2 0-4-1.5-4-3v-1h8v1c0 1.5-2 3-4 3z" />
+  </svg>
+);
 
   return (
     <div className="skull-rating flex justify-center gap-2">
