@@ -619,3 +619,33 @@ a {
 .skull-rating button:hover svg {
   transform: scale(1.2);
 } */
+
+/* Skull Rating Picker */
+.skull-rating {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem; /* space between skulls */
+}
+
+.skull-rating button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.skull-rating button:hover svg {
+  transform: scale(1.2); /* grow on hover */
+}
+
+.skull-rating svg {
+  width: 3rem;  /* adjust size */
+  height: 3rem;
+  transition: transform 0.2s, color 0.2s;
+  color: #b347ff; /* default skull color */
+}
+
+.skull-rating svg[fill="currentColor"] {
+  color: #9b30ff; /* filled skull color */
+}
