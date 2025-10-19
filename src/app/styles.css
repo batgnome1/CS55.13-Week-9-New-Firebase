@@ -608,7 +608,7 @@ a {
   gap: 6px;
 }*/
 
-.skull-rating button {
+/*.skull-rating button {
   background: none;
   border: none;
   cursor: pointer;
@@ -618,4 +618,4 @@ a {
 
 .skull-rating button:hover svg {
   transform: scale(1.2);
-}
+} */
