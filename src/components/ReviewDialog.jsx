@@ -1,9 +1,6 @@
 "use client";
 
-// This component handles the review dialog and uses a Next.js feature known as Server Actions to handle the form submission
-
 import { useLayoutEffect, useRef } from "react";
-import SkullRatingPicker from "@/src/components/RatingPicker.jsx";
 import { handleReviewFormSubmission } from "@/src/app/actions.js";
 
 /**
@@ -17,73 +14,60 @@ import { handleReviewFormSubmission } from "@/src/app/actions.js";
  * @param {string} userId - ID of the user submitting the review
  * @param {string} id - ID of the restaurant being reviewed
  */
-const ReviewDialog = ({
-  isOpen,
-  handleClose,
-  review,
-  onChange,
-  userId,
-  id,
-}) => {
-  // Reference to the dialog DOM element for programmatic control
+const ReviewDialog = ({ isOpen, handleClose, review, onChange, userId, id }) => {
   const dialog = useRef();
 
-  // Use useLayoutEffect to synchronously update the dialog's modal state
-  // This ensures the dialog backdrop renders immediately when opened
   useLayoutEffect(() => {
     if (isOpen) {
-      // Show the modal dialog with backdrop
       dialog.current.showModal();
     } else {
-      // Close the modal dialog
       dialog.current.close();
     }
-  }, [isOpen, dialog]); // Re-run when isOpen state changes
+  }, [isOpen, dialog]);
 
-  /**
-   * Handle clicks on the dialog backdrop
-   * Closes the dialog when user clicks outside the modal content
-   * 
-   * @param {Event} e - The click event
-   */
   const handleClick = (e) => {
-    // Check if the click target is the dialog backdrop (not the content)
     if (e.target === dialog.current) {
       handleClose();
     }
   };
 
   return (
-    // Dialog element with backdrop click handling
     <dialog ref={dialog} onMouseDown={handleClick}>
-      {/* Form using Next.js Server Actions for submission */}
       <form
         action={handleReviewFormSubmission}
         onSubmit={(e) => {
-            // Extract form data before submission for debugging
-            const text = e.target.text.value;
-            const rating = e.target.rating.value;
-            const userId = e.target.userId.value;
-            const modId = e.target.moduleId.value;
-            // Close dialog after form submission
-            handleClose();
+          const text = e.target.text.value;
+          const rating = e.target.rating.value;
+          const userId = e.target.userId.value;
+          const modId = e.target.moduleId.value;
+          handleClose();
         }}
       >
-        {/* Dialog header with title */}
         <header>
           <h3>Add your review</h3>
         </header>
-        
-        {/* Main form content */}
+
         <article>
-          {/* Rating picker component for selecting star rating */}
-          
-          <SkullRatingPicker 
-                rating={review.rating}
-                onChange={(value) => onChange(value, "rating")}
-          />
-           <input type="hidden" name="rating" value={review.rating} />
-          {/* Text input for review content */}
+          {/* SKULL RATING PICKER */}
+          <div className="skull-rating">
+            {[5, 4, 3, 2, 1].map((value) => (
+              <span key={value}>
+                <input
+                  type="radio"
+                  id={`skull${value}`}
+                  name="rating"
+                  value={value}
+                  className="radio-input"
+                  checked={review.rating === value}
+                  onChange={() => onChange(value, "rating")}
+                />
+                <label htmlFor={`skull${value}`} className="radio-label"></label>
+              </span>
+            ))}
+          </div>
+          <input type="hidden" name="rating" value={review.rating} />
+
+          {/* Review text */}
           <p>
             <input
               type="text"
@@ -96,15 +80,13 @@ const ReviewDialog = ({
             />
           </p>
 
-          {/* Hidden inputs to pass restaurant and user IDs to server action */}
+          {/* Hidden inputs for IDs */}
           <input type="hidden" name="moduleId" value={id} />
           <input type="hidden" name="userId" value={userId} />
         </article>
-        
-        {/* Dialog footer with action buttons */}
+
         <footer>
           <menu>
-            {/* Cancel button that resets form and closes dialog */}
             <button
               autoFocus
               type="reset"
@@ -113,7 +95,6 @@ const ReviewDialog = ({
             >
               Cancel
             </button>
-            {/* Submit button to send form data to server action */}
             <button type="submit" value="confirm" className="button--confirm">
               Submit
             </button>
@@ -124,5 +105,5 @@ const ReviewDialog = ({
   );
 };
 
-// Export the ReviewDialog component as the default export
 export default ReviewDialog;
+

@@ -409,7 +409,7 @@ a {
   justify-content: flex-end;
 }
 
-.radio-input {
+/*.radio-input {
   position: fixed;
   opacity: 0;
   pointer-events: none;
@@ -444,7 +444,7 @@ a {
 .radio-input:checked ~ .radio-label:hover ~ .radio-label,
 .radio-label:hover ~ .radio-input:checked ~ .radio-label {
   color: darkgoldenrod;
-}
+} */
 
 .average-rating {
   position: relative;
@@ -580,4 +580,30 @@ a {
     border: none;
     font-size: 0.8rem;
   }
+}
+
+/* === SKULL PICKER === */
+.radio-label::before {
+  content: "💀";
+  display: inline-block;
+  font-size: 32px;
+  transition: transform 0.2s, filter 0.2s;
+  filter: grayscale(1) brightness(0.6);
+}
+
+.radio-input:checked ~ .radio-label::before {
+  filter: grayscale(0) brightness(1);
+}
+
+.radio-label:hover::before,
+.radio-label:hover ~ .radio-label::before {
+  transform: scale(1.2);
+  filter: grayscale(0) brightness(1.1);
+}
+
+.skull-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 6px;
 }
