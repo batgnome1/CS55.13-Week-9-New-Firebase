@@ -3,7 +3,7 @@
 // This component handles the review dialog and uses a Next.js feature known as Server Actions to handle the form submission
 
 import { useLayoutEffect, useRef } from "react";
-import RatingPicker from "@/src/components/RatingPicker.jsx";
+import SkullRatingPicker from "@/src/components/RatingPicker.jsx";
 import { handleReviewFormSubmission } from "@/src/app/actions.js";
 
 /**
@@ -77,7 +77,7 @@ const ReviewDialog = ({
         {/* Main form content */}
         <article>
           {/* Rating picker component for selecting star rating */}
-          <RatingPicker 
+          <SkullRatingPicker 
                 rating={review.rating}
                 onChange={(value) => onChange(value, "rating")}
           />
