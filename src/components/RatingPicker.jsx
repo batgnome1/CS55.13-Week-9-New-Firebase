@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Skull from "@src/components/SingleSkull.jsx";
+import Skull from "./SingleSkull.jsx";
 
 export default function SkullRatingPicker({ rating, onChange }) {
   const [hovered, setHovered] = useState(0);
