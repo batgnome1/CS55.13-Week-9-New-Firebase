@@ -17,7 +17,7 @@ export default function Skull({ filled }) {
       viewBox="0 0 24 24"
       strokeWidth="1.5"
       stroke="currentColor"
-      className="h-10 w-10 text-purple-600"
+      className="h-10 w-10 text-purple-600 stroke-current"
     >
       <path
         strokeLinecap="round"
