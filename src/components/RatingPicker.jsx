@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { renderSkulls } from "Skulls"; // adjust path if needed
+import { renderSkulls } from "./Skulls.jsx"; // adjust path if needed
 
 export default function SkullRatingPicker({ rating, onChange }) {
   const [hovered, setHovered] = useState(0);
