@@ -8,11 +8,8 @@ export default function SkullRatingPicker({ rating, onChange }) {
 
   return (
     <div className="flex justify-center gap-2 py-2">
-      {/* TEMP: hardcoded filled skull for testing */}
-      <Skull filled={true} />
       {[1, 2, 3, 4, 5].map((value) => {
         const filled = value <= (hovered || rating);
-        console.log("hovered:", hovered, "rating:", rating, "value:", value, "filled:", filled);
         return (
           <button
             key={value}
