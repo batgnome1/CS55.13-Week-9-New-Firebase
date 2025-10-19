@@ -1,3 +1,5 @@
+"use client";
+
 export default function Skull({ filled }) {
   return filled ? (
     <svg
