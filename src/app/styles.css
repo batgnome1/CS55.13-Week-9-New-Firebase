@@ -583,7 +583,7 @@ a {
 }
 
 /* === SKULL PICKER === */
-.radio-label::before {
+/*.radio-label::before {
   content: "💀";
   display: inline-block;
   font-size: 32px;
@@ -606,4 +606,16 @@ a {
   flex-direction: row-reverse;
   justify-content: center;
   gap: 6px;
+}*/
+
+.skull-rating button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s;
+}
+
+.skull-rating button:hover svg {
+  transform: scale(1.2);
 }
