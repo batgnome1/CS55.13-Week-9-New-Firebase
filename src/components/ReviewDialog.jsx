@@ -77,13 +77,11 @@ const ReviewDialog = ({
         {/* Main form content */}
         <article>
           {/* Rating picker component for selecting star rating */}
-          <div className="bg-gray-900 text-white p-6">
-
-
+          
           <SkullRatingPicker 
                 rating={review.rating}
                 onChange={(value) => onChange(value, "rating")}
-          /></div>
+          />
            <input type="hidden" name="rating" value={review.rating} />
           {/* Text input for review content */}
           <p>
