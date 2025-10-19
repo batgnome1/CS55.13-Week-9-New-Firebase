@@ -17,7 +17,7 @@ export async function handleReviewFormSubmission(data) {
         await addReviewToModule(db, data.get("moduleId"), {
                 text: data.get("text"),
                 rating: data.get("rating"),
-                userId: currentUser.uid,
+             //   userId: currentUser.uid,
 
                 // This came from a hidden form field.
                // userId: data.get("userId"),
