@@ -64,7 +64,7 @@ const ReviewDialog = ({
             const text = e.target.text.value;
             const rating = e.target.rating.value;
             const userId = e.target.userId.value;
-            const restId = e.target.moduleId.value;
+            const modId = e.target.moduleId.value;
             // Close dialog after form submission
             handleClose();
         }}
@@ -77,8 +77,11 @@ const ReviewDialog = ({
         {/* Main form content */}
         <article>
           {/* Rating picker component for selecting star rating */}
-          <RatingPicker />
-
+          <RatingPicker 
+                rating={review.rating}
+                onChange={(value) => onChange(value, "rating")}
+          />
+           <input type="hidden" name="rating" value={review.rating} />
           {/* Text input for review content */}
           <p>
             <input
