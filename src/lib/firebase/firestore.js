@@ -90,7 +90,7 @@ const updateWithRating = async (
     numRatings: newNumRatings,
     sumRating: newSumRating,
     avgRating: newAverage,
-    lastReviewUserId: review.userId,
+   // lastReviewUserId: review.userId,
   });
 
   // Add the new review document with current timestamp
