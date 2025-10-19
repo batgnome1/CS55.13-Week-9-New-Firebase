@@ -17,7 +17,7 @@ export default function SkullRatingPicker({ rating, onChange }) {
             onMouseEnter={() => setHovered(value)}
             onMouseLeave={() => setHovered(0)}
             onClick={() => onChange(value)}
-            className="focus:outline-none p-1"
+            className="focus:outline-none p-1 focus:ring-0 p-1"
           >
             <Skull filled={filled} />
           </button>

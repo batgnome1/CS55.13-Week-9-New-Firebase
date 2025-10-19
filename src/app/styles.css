@@ -626,3 +626,8 @@ a {
   justify-content: center;
   gap: 0.5rem;
 }
+
+button {
+  border: none;
+  background: transparent;
+}
