@@ -11,6 +11,7 @@ export default function SkullRatingPicker({ rating, onChange }) {
       {/* TEMP: hardcoded filled skull for testing */}
       <Skull filled={true} />
       {[1, 2, 3, 4, 5].map((value) => {
+          console.log("hovered:", hovered, "rating:", rating, "value:", value, "filled:", filled);
         const filled = value <= (hovered || rating);
         return (
           <button
