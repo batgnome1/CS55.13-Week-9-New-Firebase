@@ -1,19 +1,18 @@
 "use client";
 
 export default function Skull({ filled }) {
+  const skullColor = "rgb(255 202 40)"; // your custom yellow
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
+      fill={filled ? skullColor : "none"}
+      stroke={filled ? "none" : skullColor}
+      strokeWidth={filled ? "0" : "1.5"}
       width="40"
       height="40"
-      fill={filled ? "purple" : "none"}
-      stroke={filled ? "none" : "purple"}
-      strokeWidth="1.5"
-      style={{
-        background: filled ? "transparent" : "rgba(128,0,128,0.1)",
-        borderRadius: "6px"
-      }}
+      style={{ color: skullColor }}
     >
       <path
         strokeLinecap="round"
@@ -23,4 +22,6 @@ export default function Skull({ filled }) {
     </svg>
   );
 }
+
+
 
