@@ -18,7 +18,7 @@ export function getRandomDateAfter(startingDate = new Date()) {
   return randomDate;
 }
 
-export function photoBasedOnGenre(genre) {
+export default function photoBasedOnGenre(genre) {
   const baseUrl = "https://storage.googleapis.com/firestorequickstarts.appspot.com/modules";
 
   // normalize genre name
