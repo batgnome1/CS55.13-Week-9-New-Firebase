@@ -365,7 +365,7 @@ a {
     --tw-shadow:
       0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     cursor: pointer;
-    background-color: rgb(255 202 40);
+    background-color: #424382;
     border-radius: 0.75rem;
     box-shadow:
       var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
@@ -381,7 +381,7 @@ a {
     box-shadow:
       var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
       var(--tw-shadow);
-    background-color: rgb(255 143 0);
+    background-color: #424382;
     border-radius: 9999px;
     cursor: pointer;
     height: 4rem;
@@ -400,7 +400,7 @@ a {
   padding: 20px;
   font-size: 17px;
   border: none;
-  border-bottom: 2px solid rgb(255 111 0);
+  border-bottom: 2px solid #2C2C77;
   width: 100%;
 }
 
@@ -481,7 +481,7 @@ a {
 }
 
 .filter-menu {
-  background-color: white;
+  background-color: #DCE4CF;
   border-radius: 3px;
   border-bottom: 1px solid rgb(27 58 87);
 
