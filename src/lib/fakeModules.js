@@ -47,33 +47,40 @@ export async function generateModulesAndReviews() {
         ) / ratingsData.length
       : 0;
 
-    const genre =
-    randomData.moduleGenres[
-    randomNumberBetween(0, randomData.moduleGenres.length - 1)
-    ];
-    const moduleData = {
-      genre: genre,
-      name: randomData.moduleNames[
-        randomNumberBetween(0, randomData.moduleNames.length - 1)
-      ],
-      avgRating,
-      players: randomData.modulePlayers[
-        randomNumberBetween(0, randomData.modulePlayers.length - 1)
-      ],
-      numRatings: ratingsData.length,
-      sumRating: ratingsData.reduce(
-        (accumulator, currentValue) => accumulator + currentValue.rating,
-        0
-      ),
-      difficulty: randomNumberBetween(1, 5),
-      photo: photoBasedOnGenre(genre),
-      timestamp: moduleTimestamp,
-    };
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
 
-    data.push({
-      moduleData,
-      ratingsData,
-    });
+const shuffledNames = [...randomData.moduleNames]; // copy original array
+shuffleArray(shuffledNames);
+
+const data = [];
+
+for (const name of shuffledNames) {
+  const genre = randomItem(randomData.moduleGenres);
+  const players = randomItem(randomData.modulePlayers);
+  const ratingsData = generateRatingsForModule();
+  const sumRating = ratingsData.reduce((acc, r) => acc + r.rating, 0);
+  const avgRating = ratingsData.length ? sumRating / ratingsData.length : 0;
+
+  const moduleData = {
+    name,
+    genre,
+    players,
+    numRatings: ratingsData.length,
+    sumRating,
+    avgRating,
+    difficulty: randomNumberBetween(1, 5),
+    photo: photoBasedOnGenre(genre),
+    timestamp: moduleTimestamp,
+  };
+
+  data.push({ moduleData, ratingsData });
+}
+
     
     console.log(`📝 Generated module ${i + 1}:`, moduleData.name, "with", ratingsData.length, "reviews");
   }
