@@ -37,7 +37,7 @@ dialog {
     box-shadow: -7px 12px 14px 6px rgb(0 0 0 / 0.2);
 
     & article {
-      background-color: #C6CDC4;
+      background-color: unset;
     }
   }
 
