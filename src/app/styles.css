@@ -37,7 +37,7 @@ dialog {
     box-shadow: -7px 12px 14px 6px rgb(0 0 0 / 0.2);
 
     & article {
-      background-color: unset;
+      background-color: #C6CDC4;
     }
   }
 
@@ -82,8 +82,8 @@ footer {
   }
 
   & .button--confirm {
-    background-color: rgb(255 111 0);
-    color: white;
+    background-color: #424382;
+    color: #C6CDC4;
     border-radius: 3px;
   }
 
