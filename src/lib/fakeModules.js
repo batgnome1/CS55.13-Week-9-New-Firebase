@@ -47,6 +47,17 @@ export async function generateModulesAndReviews() {
         ) / ratingsData.length
       : 0;
 
+// Helper: pick a random item from an array
+function randomItem(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
+
+// Helper: get a random integer between min and max (inclusive)
+function randomNumberBetween(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Helper: shuffle an array in place
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -54,7 +65,8 @@ function shuffleArray(array) {
   }
 }
 
-const shuffledNames = [...randomData.moduleNames]; // copy original array
+// Copy and shuffle module names to avoid duplicates
+const shuffledNames = [...randomData.moduleNames];
 shuffleArray(shuffledNames);
 
 const data = [];
@@ -62,7 +74,10 @@ const data = [];
 for (const name of shuffledNames) {
   const genre = randomItem(randomData.moduleGenres);
   const players = randomItem(randomData.modulePlayers);
-  const ratingsData = generateRatingsForModule();
+
+  // Generate ratings data for this module (replace with your logic)
+  const ratingsData = generateRatingsForModule(); 
+
   const sumRating = ratingsData.reduce((acc, r) => acc + r.rating, 0);
   const avgRating = ratingsData.length ? sumRating / ratingsData.length : 0;
 
