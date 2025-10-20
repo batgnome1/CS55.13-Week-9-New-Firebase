@@ -1,7 +1,7 @@
 "use client";
 
 export default function Skull({ filled }) {
-  const skullColor = "rgb(255 202 40)"; // your custom yellow
+  const skullColor = "#2C2C77"; // your custom yellow
 
   return (
     <svg

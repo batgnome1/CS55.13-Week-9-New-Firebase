@@ -413,43 +413,6 @@ object-fit: contain
   justify-content: flex-end;
 }
 
-/*.radio-input {
-  position: fixed;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.radio-label {
-  cursor: pointer;
-  font-size: 0;
-  color: rgba(0, 0, 0, 0.2);
-  transition: color 0.1s ease-in-out;
-}
-
-.radio-label:before {
-  content: "★";
-  display: inline-block;
-  font-size: 32px;
-}
-
-.radio-input:checked ~ .radio-label {
-  color: #ffc700;
-  color: gold;
-}
-
-.radio-label:hover,
-.radio-label:hover ~ .radio-label {
-  color: goldenrod;
-}
-
-.radio-input:checked + .radio-label:hover,
-.radio-input:checked + .radio-label:hover ~ .radio-label,
-.radio-input:checked ~ .radio-label:hover,
-.radio-input:checked ~ .radio-label:hover ~ .radio-label,
-.radio-label:hover ~ .radio-input:checked ~ .radio-label {
-  color: darkgoldenrod;
-} */
-
 .average-rating {
   position: relative;
   appearance: none;
