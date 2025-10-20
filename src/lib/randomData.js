@@ -80,10 +80,10 @@ export const randomData = {
     "Adventure",
     "Comedy",
     "Fantasy",
-    "Hardboiled",
+    "Noir",
     "Horror",
     "Romance",
-    "Science Fiction",
+    "Scifi",
     "Western"
   ],
   moduleReviews: [
