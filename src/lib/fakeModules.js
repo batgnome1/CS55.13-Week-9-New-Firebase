@@ -49,9 +49,11 @@ export async function generateModulesAndReviews() {
     const avgRating = ratingsData.length ? sumRating / ratingsData.length : 0;
 
     // Create module data
+    const genre = randomData.moduleGenres[randomNumberBetween(0, randomData.moduleGenres.length - 1)];
+
     const moduleData = {
       name,
-      genre: randomData.moduleGenres[randomNumberBetween(0, randomData.moduleGenres.length - 1)],
+      genre: genre,
       players: randomData.modulePlayers[randomNumberBetween(0, randomData.modulePlayers.length - 1)],
       numRatings: ratingsData.length,
       sumRating,
