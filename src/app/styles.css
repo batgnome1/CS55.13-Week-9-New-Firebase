@@ -360,6 +360,7 @@ a {
   & img {
     height: 4rem;
   }
+}
 
 .review {
   background-color: #424382;
@@ -391,7 +392,7 @@ a {
 
 
 .add-image, 
-.review img   {
+.review   {
   
   width: 32px;
   height: 32px;
