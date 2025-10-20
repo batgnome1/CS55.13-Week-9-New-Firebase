@@ -220,12 +220,12 @@ article {
   gap: 40px;
 
   & li {
-    background: white;
+    background: #585A8D;
     max-width: 300px;
   }
 
   & a {
-    color: black;
+    color: #C6CDC4;
     display: flex;
     flex-direction: column;
     flex: 2 1 100%;
@@ -244,7 +244,7 @@ article {
   display: flex;            /* centers image */
   justify-content: center;
   align-items: center;
-  background-color: #C6CDC4; /* optional placeholder */
+  background-color: #585A8D; /* optional placeholder */
 }
 
 .image-cover img {
