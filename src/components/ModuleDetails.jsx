@@ -24,7 +24,7 @@ const ModuleDetails = ({
               setIsOpen(!isOpen);
             }}
             src="/review.svg"
-            style={{ width: "32px", height: "32px" }}
+            
           />
         )}
         <label
@@ -39,7 +39,7 @@ const ModuleDetails = ({
             className="file-input hidden w-full h-full"
           />
 
-          <img className="add-image" src="/add.svg" alt="Add image" style={{ width: "32px", height: "32px" }}/>
+          <img className="add-image" src="/add.svg" alt="Add image"/>
         </label>
       </div>
 

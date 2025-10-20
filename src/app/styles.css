@@ -399,6 +399,13 @@ a {
   }
 }
 
+.add-image, .review   {
+  
+  width: 32px;
+  height: 32px;
+  
+}
+
 #review {
   padding: 20px;
   font-size: 17px;
