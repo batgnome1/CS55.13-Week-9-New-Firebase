@@ -57,9 +57,7 @@ export async function generateModulesAndReviews() {
       sumRating,
       avgRating,
       difficulty: randomNumberBetween(1, 5),
-      photo: photoBasedOnGenre(
-        randomData.moduleGenres[randomNumberBetween(0, randomData.moduleGenres.length - 1)]
-      ),
+      photo: photoBasedOnGenre(genre),
       timestamp: moduleTimestamp,
     };
 
