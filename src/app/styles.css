@@ -96,8 +96,8 @@ footer {
 }
 
 header {
-  background-color: rgb(56 85 116);
-  color: white;
+  background-color: #2C2C77;
+  color: #C6CDC4;
   display: flex;
   justify-content: space-between;
   padding: 0.8rem;
@@ -114,7 +114,7 @@ header {
   }
   & a {
     text-decoration: none;
-    color: white;
+    color: #C6CDC4;
   }
   .profileImage {
     border-radius: 100%;
@@ -193,7 +193,7 @@ header {
 }
 
 .main__home {
-  background-color: rgb(178 193 212);
+  background-color: #585A8D;
   min-height: 100vh;
 }
 
@@ -244,7 +244,7 @@ article {
   display: flex;            /* centers image */
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0; /* optional placeholder */
+  background-color: #C6CDC4; /* optional placeholder */
 }
 
 .image-cover img {
@@ -314,7 +314,7 @@ a {
   position: absolute;
   bottom: 0;
   padding: 20px;
-  color: white;
+  color: #C6CDC4;
 
   & span {
     color: inherit;
@@ -568,7 +568,7 @@ a {
     padding-right: 0.5rem;
     background-color: rgb(71 98 130);
     border-radius: 9999px;
-    color: white;
+    color: #C6CDC4;
     font-size: 0.95rem;
   }
 
@@ -576,7 +576,7 @@ a {
     cursor: pointer;
     margin-left: 5px;
     padding: 2px 10px;
-    color: white;
+    color: #C6CDC4;
     background-color: transparent;
     outline: none;
     border: none;
