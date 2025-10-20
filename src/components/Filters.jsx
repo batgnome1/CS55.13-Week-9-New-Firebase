@@ -8,7 +8,7 @@ function FilterSelect({ label, options, value, onChange, name, icon }) {
       <img 
           src={icon} 
           alt={label} 
-            style={{ width: "32px", height: "32px", marginRight: "8px", verticalAlign: "middle" }}
+            style={{ width: "32px", height: "32px", marginRight: "8px", verticalAlign: baseline }}
         />
       <label>
         {label}
