@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <path d="M18.228,17.455H45.772A2.227,2.227,0,0,1,48,19.682v1.363a2.228,2.228,0,0,1-2.228,2.228H18.228A2.228,2.228,0,0,1,16,21.045V19.682A2.227,2.227,0,0,1,18.228,17.455Z" fill="#ffcb2c"/>
-  <rect x="16" y="29.091" width="20.364" height="5.818" rx="2.228" fill="#f58a67"/>
-  <rect x="16" y="40.727" width="15.266" height="5.818" rx="2.228" fill="#f27c21"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16"><!-- Icon from Qlementine Icons by Olivier Cléro - https://github.com/oclero/qlementine-icons/blob/master/LICENSE --><path fill="currentColor" d="M3 1.5a.5.5 0 0 0-1 0v11.8L.85 12.15a.5.5 0 0 0-.707.707l2 2a.5.5 0 0 0 .707 0l2-2a.5.5 0 0 0-.707-.707l-1.15 1.15V1.5zM7.5 12a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm0-3a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm0-3a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm8-2a.5.5 0 0 0 0-1h-8a.5.5 0 0 0 0 1z"/></svg>
