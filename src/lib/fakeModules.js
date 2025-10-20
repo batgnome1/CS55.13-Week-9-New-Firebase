@@ -7,6 +7,8 @@ import { randomData } from "@/src/lib/randomData.js";
 
 import { Timestamp } from "firebase/firestore";
 
+import photoBasedOnGenre from "./utils.js";
+
 export async function generateModulesAndReviews() {
   console.log("🎲 Generating fake modules and reviews...");
   const modulesToAdd = 60;
