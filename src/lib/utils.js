@@ -19,7 +19,6 @@ export function getRandomDateAfter(startingDate = new Date()) {
 }
 
 export default function photoBasedOnGenre(genre) {
-  const baseUrl = "https://storage.googleapis.com/firestorequickstarts.appspot.com/modules";
 
   // normalize genre name
   const lower = genre.toLowerCase();
@@ -41,5 +40,5 @@ export default function photoBasedOnGenre(genre) {
   const max = genreCounts[lower] || 1;
   const index = Math.floor(Math.random() * max) + 1;
 
-  return `${baseUrl}/${lower}/${lower}${index}.png`;
+  return `/modImages/${lower}/${lower}${index}.png`;
 }
