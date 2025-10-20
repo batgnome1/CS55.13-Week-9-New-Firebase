@@ -53,9 +53,9 @@ const ModuleDetails = ({
           </div>
           <p>{module.description}</p>
           <p>
-            Genre: {module.genre} | Players: {module.players}
+            <strong>Genre: </strong>{module.genre} | <strong>Players:</strong> {module.players}
           </p>
-          <p>Difficulty: {"💀".repeat(module.difficulty)}</p>
+          <p><strong>Difficulty:</strong> {"💀".repeat(module.difficulty)}</p>
           {children}
         </div>
       </div>
