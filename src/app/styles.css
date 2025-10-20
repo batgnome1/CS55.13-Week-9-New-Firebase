@@ -198,13 +198,13 @@ header {
 }
 
 .main__module {
-  background-color: rgb(229 234 240);
+  background-color: #9A9FAE;
   min-height: 90vh;
 }
 
 article {
   margin: 0 auto;
-  background-color: rgb(229 234 240);
+  background-color: #DCE4CF;
   padding: 20px 40px;
 }
 
