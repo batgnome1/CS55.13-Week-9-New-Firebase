@@ -17,3 +17,29 @@ export function getRandomDateAfter(startingDate = new Date()) {
   );
   return randomDate;
 }
+
+export function photoBasedOnGenre(genre) {
+  const baseUrl = "https://storage.googleapis.com/firestorequickstarts.appspot.com/modules";
+
+  // normalize genre name
+  const lower = genre.toLowerCase();
+
+  // number of images per genre (adjust if some genres have more/less)
+  const genreCounts = {
+    horror: 12,
+    fantasy: 6,
+    scifi: 6,
+    comedy: 6,
+    romance: 6,
+    adventure: 6,
+    noir: 6,
+    action: 6,
+    western: 6
+  };
+
+  // if genre isn’t listed, use default
+  const max = genreCounts[lower] || 1;
+  const index = Math.floor(Math.random() * max) + 1;
+
+  return `${baseUrl}/${lower}/${lower}${index}.png`;
+}

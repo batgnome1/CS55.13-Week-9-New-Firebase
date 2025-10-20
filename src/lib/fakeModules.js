@@ -45,11 +45,12 @@ export async function generateModulesAndReviews() {
         ) / ratingsData.length
       : 0;
 
+    const genre =
+    randomData.moduleGenres[
+    randomNumberBetween(0, randomData.moduleGenres.length - 1)
+    ];
     const moduleData = {
-      genre:
-        randomData.moduleGenres[
-          randomNumberBetween(0, randomData.moduleGenres.length - 1)
-        ],
+      genre: genre,
       name: randomData.moduleNames[
         randomNumberBetween(0, randomData.moduleNames.length - 1)
       ],
@@ -63,10 +64,7 @@ export async function generateModulesAndReviews() {
         0
       ),
       difficulty: randomNumberBetween(1, 5),
-      photo: `https://storage.googleapis.com/firestorequickstarts.appspot.com/food_${randomNumberBetween(
-        1,
-        22
-      )}.png`,
+      photo: photoBasedOnGenre(genre),
       timestamp: moduleTimestamp,
     };
 
