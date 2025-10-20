@@ -246,7 +246,7 @@ article {
   display: flex;            /* centers image */
   justify-content: center;
   align-items: center;
-  background-color: #585A8D; /* optional placeholder */
+  background-color: #9A9FAE; /* optional placeholder */
 }
 
 .image-cover img {
