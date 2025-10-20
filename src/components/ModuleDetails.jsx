@@ -51,7 +51,7 @@ const ModuleDetails = ({
 
             <span>({module.numRatings})</span>
           </div>
-
+          <p>{module.description}</p>
           <p>
             Genre: {module.genre} | Players: {module.players}
           </p>

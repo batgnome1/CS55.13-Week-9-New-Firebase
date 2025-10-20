@@ -8,6 +8,10 @@ import { randomData } from "@/src/lib/randomData.js";
 import { Timestamp } from "firebase/firestore";
 import photoBasedOnGenre from "./utils.js";
 
+function randomItem(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
+
 export async function generateModulesAndReviews() {
   console.log("🎲 Generating fake modules and reviews...");
 
@@ -51,9 +55,15 @@ export async function generateModulesAndReviews() {
     // Create module data
     const genre = randomData.moduleGenres[randomNumberBetween(0, randomData.moduleGenres.length - 1)];
 
+    const genreData = randomData.moduleDescriptions.find(d => d.genre === genre);
+    const description = genreData
+  ? randomItem(genreData.descriptions)
+  : "No description available.";
+
     const moduleData = {
       name,
       genre: genre,
+      description: description,
       players: randomData.modulePlayers[randomNumberBetween(0, randomData.modulePlayers.length - 1)],
       numRatings: ratingsData.length,
       sumRating,
