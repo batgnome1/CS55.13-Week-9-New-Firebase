@@ -131,9 +131,11 @@ header {
 
   & img {
     margin-inline-end: 10px;
+    width: 55px;
+    height: auto;
   }
 
-  color: white;
+  color: #C6CDC4;
   text-decoration: none;
   font-size: 1.25rem;
   font-weight: 500;
