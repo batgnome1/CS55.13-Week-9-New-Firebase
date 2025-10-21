@@ -113,10 +113,10 @@ header {
   padding: 0 20px;
   font-size: 1rem;
   text-align: center;
-  color: white;
+  color: #C6CDC4;
   text-shadow: 1px 1px 1px black;
   border-radius: 10px;
-  background-color: tomato;
+  background-color: #6E7198;
   background-image: linear-gradient(
     to top left,
     rgb(0 0 0 / 0.2),
@@ -128,11 +128,11 @@ header {
     inset -2px -2px 3px rgb(0 0 0 / 0.6);
 }
 
-.styled:hover {
-  background-color: red;
+.test:hover {
+  background-color: #424382;
 }
 
-.styled:active {
+.test:active {
   box-shadow:
     inset -2px -2px 3px rgb(255 255 255 / 0.6),
     inset 2px 2px 3px rgb(0 0 0 / 0.6);
