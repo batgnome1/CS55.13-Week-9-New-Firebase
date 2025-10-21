@@ -287,9 +287,6 @@ article {
   justify-content: center;
   align-items: center;
   background-color: #9A9FAE; /* optional placeholder */
-  box-shadow:
-    inset 2px 2px 3px rgb(255 255 255 / 0.6),
-    inset -2px -2px 3px rgb(0 0 0 / 0.6);
 }
 
 .image-cover img {
@@ -298,14 +295,11 @@ article {
   width: auto;
   height: auto;
   object-fit: contain;  /* ensures whole image is visible */
-  transition: filter 0.3s ease;
-  box-shadow:
-    inset 2px 2px 3px rgb(255 255 255 / 0.6),
-    inset -2px -2px 3px rgb(0 0 0 / 0.6);
+  transition: filter 0.3s ease transform 0.3s ease;
 }
 
 .image-cover img:hover {
-  filter: grayscale(50%); 
+  filter: grayscale(50%) contrast(0.9); 
   transform: scale(1.05);
 }
 
