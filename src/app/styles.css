@@ -279,6 +279,12 @@ article {
   justify-content: center;
   align-items: center;
   background-color: #9A9FAE; /* optional placeholder */
+  box-shadow:
+    inset 2px 2px 3px rgb(255 255 255 / 0.6),
+    inset -2px -2px 3px rgb(0 0 0 / 0.6);
+}
+.image-cover:hover {
+  background-color: #424382;
 }
 
 .image-cover img {

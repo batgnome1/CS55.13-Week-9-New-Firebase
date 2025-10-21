@@ -105,7 +105,7 @@ export default function Header({ initialUser }) {
       </Link>
       <button className="test" type="button">About</button>
       <button className="test" type="button">Mapmaker</button>
-      <button className="test" type="button">Character Genertor</button>
+      <button className="test" type="button">Character Generator</button>
       {/* Conditional rendering based on user authentication state */}
       {user ? (
         // User is signed in - show profile information and menu
