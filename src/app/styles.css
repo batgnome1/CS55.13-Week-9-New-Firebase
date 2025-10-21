@@ -254,7 +254,7 @@ article {
   gap: 40px;
 
   & li {
-    background: #9A9FAE;
+    background: #6E7198;
     max-width: 300px;
     box-shadow:
     inset 4px 0 6px rgb(255 255 255 / 0.6),
@@ -325,10 +325,11 @@ a {
   padding: 5px 0;
   display: flex;
   align-items: center;
-  box-shadow: none !important;
+  
 
   & ul {
     display: flex;
+    box-shadow: none !important;
   }
 
   & svg {
