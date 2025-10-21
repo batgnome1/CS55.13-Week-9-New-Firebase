@@ -259,7 +259,7 @@ article {
     box-shadow:
     inset 2px 2px 3px rgb(255 255 255 / 0.6),
     inset -2px -2px 3px rgb(0 0 0 / 0.6);
-    filter: grayscale(50%) contrast(0.9);
+    filter: grayscale(20%) contrast(0.9);
     transition: filter 0.3s ease, transform 0.3s ease;
   }
    & li:hover {
