@@ -32,8 +32,8 @@ export default function ReviewsListClient({
           </ul>
         ) : (
           <p>
-            This GNOMERCY scenario has not yet received a scene,{" "}
-            {!userId ? "first login and then" : ""} add your own scene!
+            This GNOMERCY module has not yet received a review,{" "}
+            {!userId ? "first login and then" : ""} consider adding one!
           </p>
         )}
       </ul>

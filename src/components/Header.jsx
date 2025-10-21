@@ -103,7 +103,7 @@ export default function Header({ initialUser }) {
         <img src="/gnomercy-logo.svg" alt="GNOMERCY" />
         GNOMERCY - A TTRPG system 
       </Link>
-      
+      <button className="test" type="button">testing</button>
       {/* Conditional rendering based on user authentication state */}
       {user ? (
         // User is signed in - show profile information and menu
