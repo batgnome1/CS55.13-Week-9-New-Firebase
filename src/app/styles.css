@@ -257,8 +257,9 @@ article {
     background: #9A9FAE;
     max-width: 300px;
     box-shadow:
-    inset 2px 2px 3px rgb(255 255 255 / 0.6),
-    inset -2px -2px 3px rgb(0 0 0 / 0.6);
+    inset 4px 0 6px rgb(255 255 255 / 0.6),
+    inset -4px 0 6px rgb(0 0 0 / 0.6),
+    inset 0 4px 6px rgb(0 0 0 / 0.6);
     filter: grayscale(20%) contrast(0.9);
     transition: filter 0.3s ease, transform 0.3s ease;
   }
