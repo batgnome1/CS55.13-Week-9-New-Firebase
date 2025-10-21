@@ -288,6 +288,10 @@ article {
   justify-content: center;
   align-items: center;
   background-color: #9A9FAE; /* optional placeholder */
+  box-shadow:
+    inset 0 -4px 6px rgb(255 255 255 / 0.6),
+    inset 4px 0 6px rgb(0 0 0 / 0.6),
+    inset -4px 0 6px rgb(0 0 0 / 0.6);
 }
 
 .image-cover img {
@@ -296,7 +300,6 @@ article {
   width: auto;
   height: auto;
   object-fit: contain;  /* ensures whole image is visible */
-  transition: filter 0.3s ease transform 0.3s ease;
 }
 
 a {
