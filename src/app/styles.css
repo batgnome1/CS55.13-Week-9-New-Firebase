@@ -256,7 +256,15 @@ article {
   & li {
     background: #9A9FAE;
     max-width: 300px;
+    box-shadow:
+    inset 2px 2px 3px rgb(255 255 255 / 0.6),
+    inset -2px -2px 3px rgb(0 0 0 / 0.6);
+    transition: filter 0.3s ease, transform 0.3s ease;
   }
+   & li:hover {
+      filter: grayscale(50%) contrast(0.9); 
+      transform: scale(1.05);
+   }
 
   & a {
     color: #C6CDC4;
@@ -297,8 +305,8 @@ article {
 }
 
 .image-cover img:hover {
-  filter: brightness(1.3); 
-  transform: scale(1.02);
+  filter: grayscale(50%); 
+  transform: scale(1.05);
 }
 
 a {
@@ -316,9 +324,6 @@ a {
 
 .module__details {
   padding: 20px;
-  box-shadow:
-    inset 2px 2px 3px rgb(255 255 255 / 0.6),
-    inset -2px -2px 3px rgb(0 0 0 / 0.6);
 }
 
 .module__rating { /* might need to update this to module_difficulty */
