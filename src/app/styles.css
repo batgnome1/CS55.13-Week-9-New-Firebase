@@ -449,7 +449,7 @@ a {
 .add-image, 
 .review img {
   
-object-fit: contain
+object-fit: cover
 
 }
 
