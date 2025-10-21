@@ -49,9 +49,8 @@ const ModuleRating = ({ module }) => (
 const ModuleMetadata = ({ module }) => (
   <div className="module__meta">
     <p>
-      Genre: {module.genre} | Players: {module.players}
+      Genre: {module.genre} | Players: {module.players} | Difficulty: {"💀".repeat(module.difficulty)}
     </p>
-    <p>Difficulty: {"💀".repeat(module.difficulty)}</p>
   </div>
 );
 
