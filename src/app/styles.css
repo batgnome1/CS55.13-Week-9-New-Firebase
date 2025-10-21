@@ -270,6 +270,10 @@ article {
   }
 }
 
+.modules:hover {
+   background-color: #424382;
+}
+
 .image-cover {
   width: 100%;
   max-height: 500px;
@@ -283,9 +287,6 @@ article {
     inset 2px 2px 3px rgb(255 255 255 / 0.6),
     inset -2px -2px 3px rgb(0 0 0 / 0.6);
 }
-.image-cover:hover {
-  background-color: #424382;
-}
 
 .image-cover img {
   max-width: 100%;   /* scale down to fit width */
@@ -293,6 +294,9 @@ article {
   width: auto;
   height: auto;
   object-fit: contain;  /* ensures whole image is visible */
+  box-shadow:
+    inset 2px 2px 3px rgb(255 255 255 / 0.6),
+    inset -2px -2px 3px rgb(0 0 0 / 0.6);
 }
 
 a {
@@ -310,6 +314,9 @@ a {
 
 .module__details {
   padding: 20px;
+  box-shadow:
+    inset 2px 2px 3px rgb(255 255 255 / 0.6),
+    inset -2px -2px 3px rgb(0 0 0 / 0.6);
 }
 
 .module__rating { /* might need to update this to module_difficulty */
