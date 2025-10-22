@@ -17,6 +17,7 @@ const ModuleDetails = ({
 
       <div className="actions">
         {userId && (
+          <button className="test">
           <img
             alt="review"
             className="review"
@@ -25,22 +26,8 @@ const ModuleDetails = ({
             }}
             src="/review.svg"
             
-          />
+          /></button>
         )}
-        <label
-          onChange={(event) => handleModuleImage(event.target)}
-          htmlFor="upload-image"
-          className="add"
-        >
-          <input
-            name=""
-            type="file"
-            id="upload-image"
-            className="file-input hidden w-full h-full"
-          />
-
-          <img className="add-image" src="/add.svg" alt="Add image"/>
-        </label>
       </div>
 
       <div className="details__container">

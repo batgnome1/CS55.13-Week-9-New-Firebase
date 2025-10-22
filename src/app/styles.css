@@ -256,10 +256,6 @@ article {
   & li {
     background: #6E7198;
     max-width: 300px;
-  /*  box-shadow:
-    inset 4px 0 6px rgb(255 255 255 / 0.6),
-    inset -4px 0 6px rgb(0 0 0 / 0.6),
-    inset 0 4px 6px rgb(0 0 0 / 0.6); */
     filter: grayscale(20%) contrast(0.9);
     transition: filter 0.3s ease, transform 0.3s ease;
   }
@@ -288,7 +284,7 @@ article {
   display: flex;            /* centers image */
   justify-content: center;
   align-items: center;
- /* background-color: #6E7198; /* optional placeholder */
+  background-color: #6E7198; /* optional placeholder 
   box-shadow:
     inset 0 -4px 6px rgb(255 255 255 / 0.6),
     inset 4px 0 6px rgb(0 0 0 / 0.6),
@@ -329,6 +325,7 @@ a {
   padding: 5px 0;
   display: flex;
   align-items: center;
+  background-color: #9A9FAE; 
   
 
   & ul {
@@ -376,20 +373,6 @@ a {
     color: inherit;
   }
 }
-
-/*.details__container {
-  --tw-gradient-from: #c60094 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(56 85 116 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgb(24 25 26 / 50%);
-  width: 100%;
-  height: 100%;
-} */
 
 .reviews {
   & .review__item {
