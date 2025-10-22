@@ -212,8 +212,6 @@ header {
 
 .profile {
   display: flex;
-  /* align-items: center;
-	justify-content: center; */
 
   & p {
     display: flex;
@@ -314,7 +312,7 @@ a {
 
 .module__details {
   padding: 20px;
- /* background-color: #9A9FAE; */
+  background-color: #9A9FAE; 
   box-shadow:
     inset 4px 0 6px rgb(255 255 255 / 0.6),
     inset -4px 0 6px rgb(0 0 0 / 0.6),
@@ -325,7 +323,7 @@ a {
   padding: 5px 0;
   display: flex;
   align-items: center;
-  background-color: #DCE4CF;
+
 
   & ul {
     display: flex;
@@ -583,52 +581,13 @@ object-fit: cover
   }
 }
 
-/* === SKULL PICKER === */
-/*.radio-label::before {
-  content: "💀";
-  display: inline-block;
-  font-size: 32px;
-  transition: transform 0.2s, filter 0.2s;
-  filter: grayscale(1) brightness(0.6);
-}
-
-.radio-input:checked ~ .radio-label::before {
-  filter: grayscale(0) brightness(1);
-}
-
-.radio-label:hover::before,
-.radio-label:hover ~ .radio-label::before {
-  transform: scale(1.2);
-  filter: grayscale(0) brightness(1.1);
-}
-
-.skull-rating {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  gap: 6px;
-}*/
-
-/*.skull-rating button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  transition: transform 0.2s;
-}
-
-.skull-rating button:hover svg {
-  transform: scale(1.2);
-} */
-
-/* Skull Rating Picker */
 .skull-rating {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
 }
 
-button {
+/*button {
   border: none;
   background: transparent;
-}
+} */
