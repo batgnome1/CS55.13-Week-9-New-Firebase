@@ -405,7 +405,7 @@ a {
   margin: 0 30px;
 }
 
-.add {
+/*.add {
   background-color: #424382;
   border-radius: 9999px;
   cursor: pointer;
@@ -414,7 +414,7 @@ a {
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
               0 4px 6px -4px rgb(0 0 0 / 0.1);
   margin: 0 30px;
-}
+} */
 
   .add input {
     display: none;
