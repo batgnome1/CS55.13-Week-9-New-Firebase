@@ -262,6 +262,10 @@ article {
       transform: scale(1.05);
    }
 
+  & ul {
+    background: transparent;
+  }
+
   & a {
     color: #C6CDC4;
     display: flex;
