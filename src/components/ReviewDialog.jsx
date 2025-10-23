@@ -18,6 +18,7 @@ const ReviewDialog = ({ isOpen, handleClose, review, onChange, userId, id }) => 
         action={handleReviewFormSubmission}
         onSubmit={(e) => {
           e.preventDefault();
+           console.log("Submitting review:", review);
           handleClose();
         }}
       >

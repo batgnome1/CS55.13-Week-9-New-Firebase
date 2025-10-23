@@ -121,16 +121,18 @@ export async function addReviewToModule(db, moduleId, review) {
 
         try {
                 // Create references to the restaurant document and new rating document
+                console.log("📤 Attempting to add review to Firestore...");
                 const docRef = doc(collection(db, "modules"), moduleId);
                 const newRatingDocument = doc(
                         collection(db, `modules/${moduleId}/ratings`)
                 );
-                console.log("this is the modID ", moduleId);
+               
                 // Use a transaction to atomically update restaurant stats and add the review
                 // This ensures data consistency even if multiple reviews are added simultaneously
                 await runTransaction(db, transaction =>
                         updateWithRating(transaction, docRef, newRatingDocument, review)
                 );
+                console.log("✅ Firestore write successful:", docRef.id);
         } catch (error) {
                 // Log the error and re-throw it for the calling code to handle
                 console.error(
