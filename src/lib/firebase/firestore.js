@@ -125,7 +125,7 @@ export async function addReviewToModule(db, moduleId, review) {
                 const newRatingDocument = doc(
                         collection(db, `modules/${moduleId}/ratings`)
                 );
-
+                console.log("this is the modID ", moduleId);
                 // Use a transaction to atomically update restaurant stats and add the review
                 // This ensures data consistency even if multiple reviews are added simultaneously
                 await runTransaction(db, transaction =>
