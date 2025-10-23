@@ -252,7 +252,7 @@ article {
   gap: 40px;
 
   & li {
-    background: #6E7198;
+    background: #9A9FAE;
     max-width: 300px;
     filter: grayscale(20%) contrast(0.9);
     transition: filter 0.3s ease, transform 0.3s ease;
