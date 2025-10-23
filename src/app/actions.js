@@ -11,7 +11,7 @@ import { getFirestore } from "firebase/firestore";
 // use with caution.
 // https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions
 export async function handleReviewFormSubmission(data) {
-        console.log("🟢 handleReviewFormSubmission triggered with data:", Object.fromEntries(formData.entries()));
+        console.log("🟢 handleReviewFormSubmission triggered with data:", Object.fromEntries(data.entries()));
         const { app } = await getAuthenticatedAppForUser();
         const db = getFirestore(app);
 
