@@ -14,14 +14,15 @@ const ReviewDialog = ({ isOpen, handleClose, review, onChange, userId, id }) => 
 
   return (
     <dialog ref={dialog} onMouseDown={(e) => e.target === dialog.current && handleClose()}>
-      <form
-        action={handleReviewFormSubmission}
-        onSubmit={(e) => {
-          e.preventDefault();
-           console.log("Submitting review:", review);
-          handleClose();
-        }}
-      >
+
+        <form
+          onSubmit={async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            await handleReviewFormSubmission(formData);
+            handleClose();
+          }}
+        >
         <header><h3>Add your review</h3></header>
 
         <article>
