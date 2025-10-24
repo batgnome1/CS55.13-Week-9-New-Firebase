@@ -159,16 +159,16 @@ export async function addReviewToModule(db, moduleId, review) {
 function applyQueryFilters(q, { genre, players, difficulty, sort }) {
   // Filter by restaurant category if specified
   if (genre) {
-    q = query(q, where("genre", "==", genre));
+    q = query(q, where("Genre", "==", genre));
   }
   // Filter by city if specified
   if (players) {
-    q = query(q, where("players", "==", players));
+    q = query(q, where("Players", "==", players));
   }
   // Filter by price level (price string length determines the level)
   // e.g., "$" = 1, "$$" = 2, "$$$" = 3, "$$$$" = 4
   if (difficulty) {
-    q = query(q, where("difficulty", "==", difficulty.length));
+    q = query(q, where("Difficulty", "==", difficulty.length));
   }
   // Sort by average rating (default) or by number of reviews
   if (sort === "Rating" || !sort) {
