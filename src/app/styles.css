@@ -366,7 +366,7 @@ a {
   z-index: 1;
   bottom: -30px;
 
-  right: 30px;
+  right: 140px;
   display: flex;
   justify-content: center;
   & img {
