@@ -17,7 +17,10 @@ const ModuleDetails = ({
 
       <div className="actions">
         {userId && (
-          <button className="test">Add Review</button>
+          <button className="test">
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}</button>
         )}
       </div>
 
