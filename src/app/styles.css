@@ -366,7 +366,8 @@ a {
   bottom: 0;
   padding: 20px;
   color: #C6CDC4;
-  background-color: #9A9FAE;
+  /*background-color: #9A9FAE; */
+  background: content-box linear-gradient(#6E7198, #585A8D);
 
   & span {
     color: inherit;
