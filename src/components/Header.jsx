@@ -104,7 +104,7 @@ export default function Header({ initialUser }) {
         GNOMERCY - A TTRPG system 
       </Link>
       <button className="test" type="button">About</button>
-      <button className="test" type="button">Mapmaker</button>
+      <a href="https://batgnome1.github.io/mapmaker/" target="_blank"><button className="test" type="button">Mapmaker</button></a>
       <button className="test" type="button">Character Generator</button>
       {/* Conditional rendering based on user authentication state */}
       {user ? (
