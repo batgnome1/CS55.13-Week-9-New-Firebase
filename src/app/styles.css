@@ -366,7 +366,7 @@ a {
   z-index: 1;
   bottom: -30px;
 
-  right: 0;
+  right: 30px;
   display: flex;
   justify-content: center;
   & img {
@@ -396,7 +396,7 @@ object-fit: cover
   width: 100%;
 }
 
-/* Thanks to: https://codepen.io/chris22smith/pen/MJzLJN */
+
 .skull-rating {
   display: flex;
   flex-direction: row-reverse;
