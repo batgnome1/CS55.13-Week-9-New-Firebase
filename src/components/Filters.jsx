@@ -62,7 +62,7 @@ export default function Filters({ filters, setFilters }) {
               "Adventure",
               "Comedy",
               "Fantasy",
-              "Hardboiled",
+              "Noir",
               "Horror",
               "Romance",
               "Science Fiction",
@@ -87,7 +87,7 @@ export default function Filters({ filters, setFilters }) {
               "Seven",
               "Eight"
             ]}
-            value={filters.city}
+            value={filters.players}
             onChange={(event) => handleSelectionChange(event, "players")}
             name="players"
             icon="/location.svg"
@@ -103,7 +103,7 @@ export default function Filters({ filters, setFilters }) {
               "💀💀💀💀",
               "💀💀💀💀💀"
             ]}
-            value={filters.price}
+            value={filters.difficulty}
             onChange={(event) => handleSelectionChange(event, "difficulty")}
             name="difficulty"
             icon="/price.svg"
