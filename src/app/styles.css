@@ -107,36 +107,6 @@ header {
     height: 2rem;
   }
 
-.test {
-  border: 0;
-  line-height: 2.5;
-  padding: 0 20px;
-  font-size: 1rem;
-  text-align: center;
-  color: #C6CDC4;
-  text-shadow: 1px 1px 1px black;
-  border-radius: 10px;
-  background-color: #6E7198;
-  background-image: linear-gradient(
-    to top left,
-    rgb(0 0 0 / 0.2),
-    rgb(0 0 0 / 0.2) 30%,
-    transparent
-  );
-  box-shadow:
-    inset 2px 2px 3px rgb(255 255 255 / 0.6),
-    inset -2px -2px 3px rgb(0 0 0 / 0.6);
-}
-
-.test:hover {
-  background-color: #424382;
-}
-
-.test:active {
-  box-shadow:
-    inset -2px -2px 3px rgb(255 255 255 / 0.6),
-    inset 2px 2px 3px rgb(0 0 0 / 0.6);
-}
 
   & ul {
     display: none;
@@ -404,15 +374,6 @@ a {
   }
 }
 
-.review {
-  background-color: #424382;
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-              0 4px 6px -4px rgb(0 0 0 / 0.1);
-  cursor: pointer;
-  margin: 0 30px;
-}
-
   .add input {
     display: none;
   }
@@ -588,3 +549,34 @@ button {
   border: none;
   background: transparent;
 } 
+
+.test {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #C6CDC4;
+  text-shadow: 1px 1px 1px black;
+  border-radius: 10px;
+  background-color: #6E7198;
+  background-image: linear-gradient(
+    to top left,
+    rgb(0 0 0 / 0.2),
+    rgb(0 0 0 / 0.2) 30%,
+    transparent
+  );
+  box-shadow:
+    inset 2px 2px 3px rgb(255 255 255 / 0.6),
+    inset -2px -2px 3px rgb(0 0 0 / 0.6);
+}
+
+.test:hover {
+  background-color: #424382;
+}
+
+.test:active {
+  box-shadow:
+    inset -2px -2px 3px rgb(255 255 255 / 0.6),
+    inset 2px 2px 3px rgb(0 0 0 / 0.6);
+}
