@@ -17,16 +17,7 @@ const ModuleDetails = ({
 
       <div className="actions">
         {userId && (
-          <button className="test">
-          <img
-            alt="review"
-            className="review"
-            onClick={() => {
-              setIsOpen(!isOpen);
-            }}
-            src="/review.svg"
-            
-          /></button>
+          <button className="test">Add Review</button>
         )}
       </div>
 
