@@ -317,10 +317,6 @@ a {
 .module__details {
   padding: 20px;
   background-color: #9A9FAE; 
-  box-shadow:
-    inset 4px 0 6px rgb(255 255 255 / 0.6),
-    inset -4px 0 6px rgb(0 0 0 / 0.6),
-    inset 0 4px 6px rgb(0 0 0 / 0.6);
 }
 
 .module__rating { /* might need to update this to module_difficulty */
@@ -370,6 +366,7 @@ a {
   bottom: 0;
   padding: 20px;
   color: #C6CDC4;
+  background-color: #9A9FAE;
 
   & span {
     color: inherit;
@@ -409,17 +406,6 @@ a {
   cursor: pointer;
   margin: 0 30px;
 }
-
-/*.add {
-  background-color: #424382;
-  border-radius: 9999px;
-  cursor: pointer;
-  height: 6rem;
-  width: 6rem;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-              0 4px 6px -4px rgb(0 0 0 / 0.1);
-  margin: 0 30px;
-} */
 
   .add input {
     display: none;
