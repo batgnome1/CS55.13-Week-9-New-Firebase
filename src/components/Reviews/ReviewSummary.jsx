@@ -31,9 +31,9 @@ export async function GeminiSummary({ moduleId }) {
   // Construct the prompt for the AI model
   // The prompt instructs Gemini to create a one-sentence summary from all reviews
   const prompt = `
-    Based on the following restaurant reviews, 
+    Based on the following table-top rpg module reviews, 
     where each review is separated by a '${reviewSeparator}' character, 
-    create a one-sentence summary of what people think of the restaurant. 
+    create a one-sentence summary of what people think of the modules. 
 
     Here are the reviews: ${reviews.map((review) => review.text).join(reviewSeparator)}
   `;
