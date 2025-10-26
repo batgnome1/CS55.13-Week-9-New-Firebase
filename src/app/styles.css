@@ -287,7 +287,6 @@ a {
 .module__details {
   padding: 20px;
   background-color: #9A9FAE; 
-  text-shadow: 1px 1px 2px white;
 }
 
 .module__rating { /* might need to update this to module_difficulty */
