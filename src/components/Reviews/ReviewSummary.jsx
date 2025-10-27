@@ -35,7 +35,9 @@ export async function GeminiSummary({ moduleId }) {
     where each review is separated by a '${reviewSeparator}' character, 
     create a one-sentence summary of what people think of the modules. 
 
-    Here are the reviews: ${reviews.map((review) => review.text).join(reviewSeparator)}
+    Here are the reviews: ${reviews.map((review) => review.text).join(reviewSeparator)}. 
+
+    If there are no reviews are available to summarize then just say "waiting for a review..."
   `;
 
   try {
