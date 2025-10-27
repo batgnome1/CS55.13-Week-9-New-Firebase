@@ -3,8 +3,9 @@
 export default function AboutPage() {
   return (
     <main>
-      <h1>GNOMERCY</h1>
-      <h2>A Tabletop Role-playing Game System</h2>
+      <h1 className="about"> GNOMERCY</h1>
+      <h2 className="about">A Tabletop Role-playing Game System</h2>
+      <article>
         <p>Gnomercy is a generic TTRPG system - a foundation of rules and mechanics without setting, 
             genre or lore. It is a highly customizable, flexible system designed to accommodate modding / homebrewing. 
         </p>
@@ -13,6 +14,7 @@ export default function AboutPage() {
             tailored for a set number of players to roleplay specific scenarios. 
         </p>
         <div><img src='/gnomercy-logo.svg' alt='gnomercylogo' /></div>
+        </article>
     </main>
   );
 }

@@ -17,9 +17,17 @@ ul {
   list-style-type: none;
 }
 
+h1 {
+  color: #2C2C77;
+} 
+
 h2 {
   font-weight: 500;
   color: #2C2C77;
+}
+
+.about {
+  text-align: center;
 }
 
 dialog {
