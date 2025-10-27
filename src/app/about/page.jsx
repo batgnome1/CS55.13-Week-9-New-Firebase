@@ -13,7 +13,7 @@ export default function AboutPage() {
             The lore, worldbuilding, genre and story for Gnomercy are provided via Modules - self contained campaigns
             tailored for a set number of players to roleplay specific scenarios. 
         </p>
-        <div><img src='/gnomercy-logo.svg' alt='gnomercylogo' /></div>
+        <div className="aboutimg"><img src='/gnomercy-logo.svg' alt='gnomercylogo' /></div>
         </article>
     </main>
   );
