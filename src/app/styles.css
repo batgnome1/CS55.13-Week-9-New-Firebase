@@ -39,6 +39,16 @@ h2 {
   background-color: #2C2C77;
 }
 
+.aboutarticle {
+  margin: 0 auto;
+  background-color: #DCE4CF;
+  padding: 20px 40px;
+}
+
+.aboutarticle {
+  width: 50%;
+}
+
 dialog {
   &[open] {
     position: fixed;
