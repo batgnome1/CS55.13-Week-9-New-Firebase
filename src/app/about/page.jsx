@@ -1,0 +1,18 @@
+
+
+export default function AboutPage() {
+  return (
+    <main>
+      <h1>GNOMERCY</h1>
+      <h2>A Tabletop Role-playing Game System</h2>
+        <p>Gnomercy is a generic TTRPG system - a foundation of rules and mechanics without setting, 
+            genre or lore. It is a highly customizable, flexible system designed to accommodate modding / homebrewing. 
+        </p>
+        <p>
+            The lore, worldbuilding, genre and story for Gnomercy are provided via Modules - self contained campaigns
+            tailored for a set number of players to roleplay specific scenarios. 
+        </p>
+        <div><img src='/gnomercy-logo.svg' alt='gnomercylogo' /></div>
+    </main>
+  );
+}
